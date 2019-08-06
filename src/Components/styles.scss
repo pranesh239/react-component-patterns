@@ -1,6 +1,30 @@
-body {
+body,
+html,
+* {
   font-family: sans-serif;
-  h1 {
-    color: tomato;
+  // box-sizing: border-box;
+}
+
+.container {
+  max-width: 768px;
+  margin: 16px auto;
+}
+
+.Accordion {
+  &-Head {
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid rgba(tomato, 0.4);
+  }
+  &-Body {
+    height: 0;
+    padding: 0 8px;
+    background: purple;
+    color: white;
+    transition: 0.3s ease-in-out;
+    &.open {
+      height: auto;
+      padding: 8px;
+    }
   }
 }
